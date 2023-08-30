@@ -57,12 +57,50 @@ public class Sistema {
 
     public void contarVotos(){
 
-        int cantidadTotalVotos = 0;
+        int cantHabitantes = 50000000;
+
+
+        for ( Partido_Politico partidoPolitico : listaPartidos){
+            System.out.println("CANTIDAD DE VOTOS TOTALES: " + partidoPolitico.getCandidato().contarVotosTotales());
+            System.out.println("PORCENATAJE EN LA POBLACION: " + ((partidoPolitico.getCandidato().contarVotosTotales() / cantHabitantes) * 100));
+        }
+
+
 
 
         
 
 
+
+    }
+
+    public Candidato candidatoGanador(){
+
+Candidato candidatoGanador = new Candidato();
+
+for (Partido_Politico partidoPolitico : listaPartidos){
+
+    if ( partidoPolitico.getCandidato().contarVotosTotales() > candidatoGanador.contarVotosTotales() ){
+        candidatoGanador = partidoPolitico.getCandidato();
+    }
+}
+        return candidatoGanador;
+    }
+
+    public int porcentajeNoVoto(){
+
+        int porcentajeTotal;
+        int cantHabitantes = 50000000;
+        int cantidadDeNoVotantes = 0;
+        for (Votante votante : padronElectoral){
+            if ( votante.getYaVoto() != true){
+                cantidadDeNoVotantes = cantidadDeNoVotantes +1;
+            }
+        }
+        porcentajeTotal = (cantidadDeNoVotantes / cantHabitantes) * 100;
+
+
+        return porcentajeTotal;
 
     }
 }

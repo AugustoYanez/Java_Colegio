@@ -2,7 +2,7 @@ package EmpresaVehiculos.Vehiculos;
 
 import Fecha.Fecha;
 
-public class Camion extends Vehiculo{
+public class Camion extends Vehiculo {
 
     public String patente;
 

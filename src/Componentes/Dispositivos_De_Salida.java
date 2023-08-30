@@ -1,6 +1,6 @@
 package Componentes;
 
-public class Dispositivos_De_Salida extends Periferico{
+public class Dispositivos_De_Salida extends Componente{
 
     String puertoValido;
 
@@ -8,8 +8,8 @@ public class Dispositivos_De_Salida extends Periferico{
         super();
         puertoValido = "Puerto";
     }
-    public Dispositivos_De_Salida(int idPeriferico, String puertoValido) {
-        super(idPeriferico);
+    public Dispositivos_De_Salida(String puertoValido) {
+        super();
         this.puertoValido = puertoValido;
     }
 

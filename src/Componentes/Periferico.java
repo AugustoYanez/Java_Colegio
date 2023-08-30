@@ -1,6 +1,6 @@
 package Componentes;
 
-public class Periferico {
+public class Periferico extends Componente{
 
     int idPeriferico;
 

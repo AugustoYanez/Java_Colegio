@@ -7,14 +7,17 @@ import Sistemas.SistemasPesarseAltura.Medida;
 import java.util.HashMap;
 
 
-public class Persona {
+public abstract class   Persona {
 
     public  String nombre;
     public  String apellido;
+
+    public int dni;
     public   String direccion;
     public  Fecha nacimiento;
     public  int edad;
     HashMap<Fecha, Medida> registro = new HashMap<Fecha, Medida>();
+
 
 
     public HashMap<Fecha, Medida> getRegistro() {
@@ -39,6 +42,15 @@ public class Persona {
         this.registro = new HashMap<Fecha, Medida>();
     }
 
+   // constructor para paso
+    public Persona(String nombre, String apellido, int dni, Fecha nacimienton){
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.dni = dni;
+        this.nacimiento = nacimiento;
+    }
+
+
     public Persona(String nombre, String apellido){
         this.nombre = nombre;
         this.apellido = apellido;
@@ -51,8 +63,11 @@ public class Persona {
         this.nacimiento = nacimiento;
     }
 
+    public Persona (String nombre, Fecha nacimiento){
 
 
+
+    }
     public String getNombre(){
 
         return nombre;
@@ -143,11 +158,5 @@ public class Persona {
         promedio = alturaglobal / contadorAlturas;
         return  promedio;
     }
-
-
-
-
-
-
 
 }

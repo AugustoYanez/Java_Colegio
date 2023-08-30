@@ -3,12 +3,12 @@ package EmpresaVehiculos.Vehiculos;
 import Fecha.Fecha;
 
 
-public class Vehiculo {
+public abstract class Vehiculo {
 
     public String marca;
     public String modelo;
     public String color;
-    public int cantidadDeRuedas;
+    public  int  cantidadDeRuedas;
     public Fecha fechafabricacion;
 
 public Vehiculo(){

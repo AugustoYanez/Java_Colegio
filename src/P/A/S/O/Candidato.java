@@ -27,10 +27,22 @@ private HashMap<Provincia, Integer> cantidadVotosPorProvincia;
     public void setCantidadVotosPorProvincia(HashMap<Provincia, Integer> cantidadVotosPorProvincia) {
         this.cantidadVotosPorProvincia = cantidadVotosPorProvincia;
     }
+public Candidato(){
 
+}
     public Candidato (String nombre, String apellido, int dni, Fecha nacimiento, Partido_Politico partidoPolitico, HashMap<Provincia, Integer> cantidadVotosPorProvincia){
         super(nombre,apellido,dni,nacimiento);
         this.partidoPolitico = partidoPolitico;
         this.cantidadVotosPorProvincia = cantidadVotosPorProvincia;
+    }
+
+
+
+    public int contarVotosTotales(){
+        int cantidadTotalVotos = 0;
+        for (Provincia provincia : partidoPolitico.getCandidato().getCantidadVotosPorProvincia().keySet()){
+            cantidadTotalVotos = cantidadTotalVotos + partidoPolitico.getCandidato().getCantidadVotosPorProvincia().get(provincia);
+        }
+        return cantidadTotalVotos;
     }
 }

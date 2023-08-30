@@ -2,10 +2,9 @@ package Alarmas;
 
 import Fecha.Fecha;
 
-public class Alarma {
+public abstract class Alarma {
 
     boolean estado;
-
     int medida;
     int valorLimite;
 
@@ -57,9 +56,7 @@ public class Alarma {
     }
 
 
-    public void verificar_medida(){
-
+    protected void verificar_medida() {
 
     }
-
 }

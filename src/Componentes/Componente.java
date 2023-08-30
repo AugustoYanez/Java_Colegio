@@ -1,6 +1,6 @@
 package Componentes;
 
-public class Componente {
+public abstract  class Componente {
 
     int idComponente;
 
@@ -13,6 +13,14 @@ int precioVenta;
 
 int stock;
 
+public Componente(){
+    this.idComponente = 1;
+    this.nombreComponente = "";
+    this.nombreFabricante = "";
+    this.modelo = "";
+    this.precioVenta = 1000;
+    this.stock = 100;
+}
     public Componente(int idComponente, String nombreComponente, String nombreFabricante, String modelo, int precioVenta, int stock) {
         this.idComponente = idComponente;
         this.nombreComponente = nombreComponente;

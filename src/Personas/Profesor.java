@@ -4,7 +4,7 @@ import Fecha.Fecha;
 
 import java.util.ArrayList;
 
-public class Profesor extends Persona{
+public class Profesor extends Persona {
 
     int porcentajedescuento;
 

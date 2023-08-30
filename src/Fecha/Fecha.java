@@ -1,6 +1,6 @@
 package Fecha;
 
-public class Fecha {
+public  class Fecha {
 
     public int dia;
     public int mes;

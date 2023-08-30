@@ -1,6 +1,7 @@
 package Objetos;
 
 import Fecha.Fecha;
+import Personas.Cliente;
 import Personas.Persona;
 
 public class Pedido {
@@ -9,7 +10,7 @@ public class Pedido {
 
     Plato plato;
 
-    Persona personapedidor;
+    Cliente personapedidor;
 
     int horaentrega;
 
@@ -19,16 +20,11 @@ public class Pedido {
 
         fechadecreacion = new Fecha(24,4,2010);
         plato = new Plato("Milasa",300,300);
-        personapedidor = new Persona();
+        personapedidor = new Cliente();
         horaentrega = 5;
         entregado = false;
-
-
-
-
-
     }
-    public Pedido(Fecha fechadecreacion, Plato plato, Persona personapedidor, int horaentrega, Boolean entregado) {
+    public Pedido(Fecha fechadecreacion, Plato plato, Cliente personapedidor, int horaentrega, Boolean entregado) {
         this.fechadecreacion = fechadecreacion;
         this.plato = plato;
         this.personapedidor = personapedidor;
@@ -56,7 +52,7 @@ public class Pedido {
         return personapedidor;
     }
 
-    public void setPersonapedidor(Persona personapedidor) {
+    public void setPersonapedidor(Cliente personapedidor) {
         this.personapedidor = personapedidor;
     }
 

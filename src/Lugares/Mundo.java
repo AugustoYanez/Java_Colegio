@@ -2,11 +2,11 @@ package Lugares;
 
 import java.util.HashSet;
 
-public class Sistema {
+public abstract class Mundo {
 
     HashSet<Lugar> lugares;
 
-    public Sistema(HashSet<Lugar> lugares) {
+    public Mundo(HashSet<Lugar> lugares) {
         this.lugares = lugares;
     }
 

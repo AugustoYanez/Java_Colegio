@@ -1,6 +1,6 @@
 package Componentes;
 
-public class Dispositivo_De_Entrada extends Periferico{
+public class Dispositivo_De_Entrada extends Componente{
 
     String tipoConcetor;
 
@@ -12,8 +12,8 @@ public class Dispositivo_De_Entrada extends Periferico{
         puertoValido = " puerto default";
     }
 
-    public Dispositivo_De_Entrada(int idPeriferico, String tipoConcetor, String puertoValido) {
-        super(idPeriferico);
+    public Dispositivo_De_Entrada( String tipoConcetor, String puertoValido) {
+        super();
         this.tipoConcetor = tipoConcetor;
         this.puertoValido = puertoValido;
     }
